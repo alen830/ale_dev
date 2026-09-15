@@ -1,8 +1,6 @@
-import 'package:ale_dev/bottom_nav.dart';
-import 'package:ale_dev/bottom_nav1.dart';
-import 'package:ale_dev/bottom_nav2.dart';
-import 'package:ale_dev/bottom_nav3.dart';
-import 'package:ale_dev/latihan_figma.dart';
+import 'package:ale_dev/pages/validasi.dart';
+import 'package:ale_dev/tugas8/bottom_nav8.dart';
+import 'package:ale_dev/tugas9/bottom_builder.dart';
 
 import 'package:flutter/material.dart';
 
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: MyBottomNav(),
+      home: LoginScreenDB(),
     );
   }
 }
