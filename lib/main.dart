@@ -1,4 +1,9 @@
-import 'package:ale_dev/pages/login_screen.dart';
+import 'package:ale_dev/bottom_nav.dart';
+import 'package:ale_dev/bottom_nav1.dart';
+import 'package:ale_dev/bottom_nav2.dart';
+import 'package:ale_dev/bottom_nav3.dart';
+import 'package:ale_dev/latihan_figma.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: LoginScreen(),
+      home: MyBottomNav(),
     );
   }
 }
