@@ -1,5 +1,4 @@
-import 'package:ale_dev/bottom_nav.dart';
-import 'package:ale_dev/tugas10/validasi.dart';
+import 'package:ale_dev/tugas7/forminput.dart';
 
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: Validasi(),
+      home: Forminput(),
     );
   }
 }

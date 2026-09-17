@@ -13,7 +13,9 @@ class Validasi extends StatelessWidget {
     return MaterialApp(
       title: 'Formulir Pendaftaran',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 11, 143, 92),
+        ),
         useMaterial3: true,
       ),
       home: const FormPage(),
