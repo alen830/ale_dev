@@ -196,7 +196,7 @@ class _FormPageState extends State<FormPage> {
   }
 }
 
-// Halaman Konfirmasi
+// Halaman Konfirmasi //
 class ConfirmationPage extends StatelessWidget {
   final String nama;
   final String kota;
