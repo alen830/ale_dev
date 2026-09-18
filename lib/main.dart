@@ -1,3 +1,4 @@
+import 'package:ale_dev/bottom_nav.dart';
 import 'package:ale_dev/tugas7/forminput.dart';
 
 import 'package:flutter/material.dart';
@@ -14,8 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: Forminput(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const MyBottomNav(),
     );
   }
 }
