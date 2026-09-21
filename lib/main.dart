@@ -1,6 +1,7 @@
+import 'package:ale_dev/tugas11/services/preference_handler.dart';
 import 'package:flutter/material.dart';
 
-import 'tugas11/services/preference_handler.dart';
+import 'tugas12/screens/register_screen.dart';
 import 'splash_screen.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const RegisterScreen(),
     );
   }
 }
