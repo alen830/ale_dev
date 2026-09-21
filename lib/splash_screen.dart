@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+import 'tugas11/services/preference_handler.dart';
+import 'login_screen.dart';
+import 'home_screen.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _checkSession();
+  }
+
+  Future<void> _checkSession() async {
+    // Memberikan delay selama 2 detik
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (!mounted) return;
+
+    // Pengecekan sesi pengguna
+    if (PreferenceHandler.isLogin) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
+      );
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.lock_person_rounded, size: 100, color: Colors.blue),
+            SizedBox(height: 24),
+            Text(
+              'My Application',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 48),
+            CircularProgressIndicator(),
+          ],
+        ),
+      ),
+    );
+  }
+}

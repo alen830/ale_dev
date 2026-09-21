@@ -1,24 +1,31 @@
-import 'package:ale_dev/bottom_nav.dart';
-import 'package:ale_dev/tugas7/forminput.dart';
-
 import 'package:flutter/material.dart';
 
-void main() {
+import 'tugas11/services/preference_handler.dart';
+import 'splash_screen.dart';
+
+void main() async {
+  // Memastikan binding Flutter siap sebelum async init
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Inisialisasi PreferenceHandler
+  await PreferenceHandler.init();
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Session Management App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
       ),
-      home: const MyBottomNav(),
+      home: const SplashScreen(),
     );
   }
 }
