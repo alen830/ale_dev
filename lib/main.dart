@@ -1,6 +1,8 @@
+import 'package:ale_dev/day_19/views/post_list_views.dart';
 import 'package:ale_dev/tugas11/services/preference_handler.dart';
 
 import 'package:ale_dev/tugas13/screens/user_list_screen.dart';
+import 'package:ale_dev/views/post_list_view.dart';
 
 import 'package:flutter/material.dart';
 
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const UserListScreen(),
+      home: const CocktailScreen(),
     );
   }
 }
