@@ -1,10 +1,14 @@
+import 'package:ale_dev/data/datasources/auth_remote_datasource.dart';
 import 'package:ale_dev/tugas12/helpers/db_helpers.dart';
 import 'package:flutter/material.dart';
 
 import '../models/user_model.dart';
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+  const RegisterScreen({
+    super.key,
+    required AuthRemoteDatasource authDatasource,
+  });
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();

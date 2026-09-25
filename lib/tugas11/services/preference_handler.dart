@@ -23,4 +23,10 @@ class PreferenceHandler {
   static Future<bool> clear() async {
     return await _preferences.clear();
   }
+
+  static Future<void> saveToken(token) async {}
+
+  static Future<void> saveUserName(name) async {}
+
+  static Future<Object?> getToken() async {}
 }

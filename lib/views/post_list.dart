@@ -2,8 +2,6 @@ import 'package:ale_dev/latapi/models/recipe_model.dart';
 import 'package:ale_dev/latapi/services/api_service.dart' show ApiService;
 import 'package:flutter/material.dart';
 
-import 'recipe_detail_screen.dart'; // Import halaman detail
-
 class RecipeScreen extends StatefulWidget {
   const RecipeScreen({super.key});
 
@@ -166,4 +164,49 @@ class _RecipeScreenState extends State<RecipeScreen> {
   }
 }
 
-class _RecipeDetailScreen {}
+class _RecipeDetailScreen extends StatelessWidget {
+  final RecipeModel recipe;
+
+  const _RecipeDetailScreen({required this.recipe});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(recipe.name),
+        backgroundColor: Colors.orange,
+        foregroundColor: Colors.white,
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.network(
+                recipe.imageUrl,
+                width: double.infinity,
+                height: 220,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => Container(
+                  height: 220,
+                  color: Colors.grey[300],
+                  child: const Center(child: Icon(Icons.broken_image)),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              recipe.name,
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text('Kategori: ${recipe.category}'),
+            Text('Asal: ${recipe.area}'),
+          ],
+        ),
+      ),
+    );
+  }
+}
